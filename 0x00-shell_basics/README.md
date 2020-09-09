@@ -1,0 +1,1 @@
+> this first script prints the name of the current working directory
