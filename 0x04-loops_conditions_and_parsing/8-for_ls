@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+file="$(ls)"
+for i in $file
+do
+    echo $i
+done
