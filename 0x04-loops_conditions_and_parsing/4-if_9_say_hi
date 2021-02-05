@@ -1,12 +1,14 @@
 #!/usr/bin/env bash
-# Say hi in the 9
+# Say hi in the 9th
 i=0
 while [ $i -lt 10 ]
 do
     if [ "$i" = 8 ]
     then
         echo "Hi"
+    else
+        echo "Holberton School"
     fi
-    echo "Holberton School"
+
     ((i++))
 done
