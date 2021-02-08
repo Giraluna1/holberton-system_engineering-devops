@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# dispaly infinit loop
+kill -9 "$(pgrep 4-to_infinity_and_beyond)"
