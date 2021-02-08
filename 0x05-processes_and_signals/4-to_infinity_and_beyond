@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# dispaly infinit loop
+i=0
+while [ $i ]
+do
+    echo "To infinity and beyond "
+    ((i++))
+done
