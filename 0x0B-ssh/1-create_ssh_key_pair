@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#This script creates an RESA key pair
+ssh-keygen
