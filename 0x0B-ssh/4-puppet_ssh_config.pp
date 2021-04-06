@@ -2,13 +2,13 @@
 # Use Identity file and not authentication
 
 file_line { 'Use private key':
-    ensure => present,
+    ensure => 'present',
     path   => '/etc/ssh/ssh_config',
     line   => 'IdentityFile ~/.ssh/holberton',
 }
 
 file_line { 'authenticate without a pwd':
-    ensure => present,
+    ensure => 'present',
     path   => '/etc/ssh/ssh_config',
     line   => 'PasswordAuthentication no',
 }
