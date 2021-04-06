@@ -1,4 +1,6 @@
 # Client configuration file (w/puppet)
+# Use Identity file and not authentication
+
 file_line { 'Use the private key':
 ensure => present,
 path   => '/etc/ssh/ssh_config',
