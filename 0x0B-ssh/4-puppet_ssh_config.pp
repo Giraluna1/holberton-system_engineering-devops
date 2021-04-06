@@ -1,14 +1,14 @@
 # Client configuration file (w/puppet)
 # Use Identity file and not authentication
 
-file_line { 'Use the private key':
+file_line { 'Use private key':
     ensure => present,
     path   => '/etc/ssh/ssh_config',
-    line   => '   IdentityFile ~/.ssh/holberton',
+    line   => 'IdentityFile ~/.ssh/holberton',
 }
 
 file_line { 'authenticate without a pwd':
     ensure => present,
     path   => '/etc/ssh/ssh_config',
-    line   => '     PasswordAuthentication no',
+    line   => 'PasswordAuthentication no',
 }
