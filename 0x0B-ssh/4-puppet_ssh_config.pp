@@ -1,3 +1,4 @@
+# Client configuration file (w/puppet)
 file_line { 'Use the private key':
 ensure => present,
 path   => '/etc/ssh/ssh_config',
