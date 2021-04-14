@@ -2,4 +2,4 @@
 # This script fix the sities-enable file to connect on port 80
 sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
 service nginx start
-service nginx stop
+sed -i '$d' /var/run/nginx.pid
