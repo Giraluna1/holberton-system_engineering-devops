@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+# This scrit configure sub dommain
+domain="$1"
+subdomain="$2"
+
+# obtener Record_type and Destination
+Record_type () {
+    url="$1.$2"
+    dig $url +noall +answer | grep "A" | awk '{print $4}'
+}
+Destination () {
+    url="$1.$2"
+    dig $url +noall +answer | grep "A" | awk '{print $5}'
+}
+
+if [ -z "$2" ]
+then
+    subdomain=$"www lb-01 web-01 web-02"
+    for sub in $subdomain;
+    do
+        R=$(Record_type $sub "$1")
+        D=$(Destination $sub "$1")
+        echo "The subdomain $sub is a $R record and points to $D"
+    done
+else
+    R=$(Record_type $subdomain $domain)
+    D=$(Destination $subdomain $domain)
+    echo "The subdomain $subdomain is a $R record and points to $D"
+fi
