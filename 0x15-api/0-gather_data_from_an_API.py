@@ -1,9 +1,11 @@
 #!/usr/bin/python3
+""" This module using a REST API for a given employee ID """
 
 import requests
 import sys
 
 if __name__ == "__main__":
+
     employed_ID = int(sys.argv[1])
     r_user = requests.get(
         'https://jsonplaceholder.typicode.com/users/{}'.format(
