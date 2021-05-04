@@ -34,7 +34,9 @@ if __name__ == "__main__":
             done += 1
             title = dic.get('title')
             list_task.append(title)
-    print('Employee {} is done with tasks ({}/{}):'.format(
+
+    print('Employee {} is done with tasks({}/{}):'.format(
         name, done, total_task))
+
     for element in list_task:
         print('\t {}'.format(element))
