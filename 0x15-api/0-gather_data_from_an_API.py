@@ -19,17 +19,20 @@ if __name__ == "__main__":
 
     # Obtain only the name
     name = dic_users.get('name')
+
     list_task = []
     total_task = 0
     done = 0
+
     # Obtain task
     for dic in list_of_dic_todos:
         total_task += 1
         completed = dic.get('completed')
-        if completed == True:
+        if completed is True:
             done += 1
             title = dic.get('title')
             list_task.append(title)
-    print('Employee {} is done with tasks ({}/{}):'.format(name, done, total_task))
+    print('Employee {} is done with tasks ({}/{}):'.format(
+        name, done, total_task))
     for element in list_task:
         print('\t {}'.format(element))
