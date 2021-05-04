@@ -24,12 +24,19 @@ if __name__ == "__main__":
     # Obtain only the username
     user_name = dic_users.get('username')
     dic_of_task = {employed_ID: []}
-    data = {}
+
     for dic in list_of_dic_todos:
-        data['task'] = dic.get('title')
-        data['completed'] = dic.get('completed')
-        data['username'] = user_name
-        dic_of_task[employed_ID].append(data)
+        list_key = []
+        list_values = []
+
+        list_key.append("task")
+        list_values.append(dic.get("title"))
+        list_key.append("completed")
+        list_values.append(dic.get("completed"))
+        list_key.append("username")
+        list_values.append(user_name)
+
+        dic_of_task[employed_ID].append(dict(zip(list_key, list_values)))
 
     with open('{}.json'.format(employed_ID), 'w', newline='') as jsonfile:
         json.dump(dic_of_task, jsonfile)
