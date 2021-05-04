@@ -4,7 +4,7 @@ import requests
 import sys
 
 if __name__ == "__main__":
-    employed_ID = sys.argv[1]
+    employed_ID = int(sys.argv[1])
     r_user = requests.get(
         'https://jsonplaceholder.typicode.com/users/{}'.format(
             employed_ID))
