@@ -5,7 +5,7 @@ import requests
 
 
 def top_ten(subreddit):
-    """  prints the titles of the first 10 hot posts listed for a given subreddit. """
+    """  the first 10 hot posts listed for a given subreddit. """
 
     user_agent = {'user-agent': 'my-app/0.0.1'}
     r_subs = requests.get(
