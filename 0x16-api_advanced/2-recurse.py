@@ -5,7 +5,9 @@ import requests
 
 
 def recurse(subreddit, hot_list=[], after=""):
-    """ list containing the titles of all hot articles for a given subreddit """
+    """ list containing the titles of all hot articles
+     for a given subreddit
+    """
 
     user_agent = {'user-agent': 'my-app/0.0.1'}
     filter = {'after': after}
